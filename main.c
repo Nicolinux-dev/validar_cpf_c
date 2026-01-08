@@ -34,7 +34,7 @@ int main()
     resto = (soma * 10) % 11;
 
     // Se o resto for 10 ou 11, o dígito verificador é 0; caso contrário, é o próprio resto
-    cpf[9] = (resto == 10 || resto == 11) ? 0 : resto;
+    cpf[9] = (resto == 10) ? 0 : resto;
 
     // -------------------------------
     // Cálculo do segundo dígito verificador
@@ -51,7 +51,7 @@ int main()
     resto = (soma * 10) % 11;
 
     // Aplica a mesma regra: se resto for 10 ou 11, o dígito é 0
-    cpf[10] = (resto == 10 || resto == 11) ? 0 : resto;
+    cpf[10] = (resto == 10) ? 0 : resto;
 
     // -------------------------------
     // Impressão do CPF formatado
@@ -67,4 +67,6 @@ int main()
         else if (i == 8)
             printf("-");
     }
+
+    return 0;
 }
